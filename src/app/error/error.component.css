@@ -1,0 +1,10 @@
+.cat {
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+button {
+  display: block;
+  margin: auto;
+}

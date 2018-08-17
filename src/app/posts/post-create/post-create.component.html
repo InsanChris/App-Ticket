@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form [formGroup]="form" (submit)="onSavePost()" *ngIf="!isLoading">
+    <mat-form-field>
+      <input matInput formControlName="title" placeholder="Titre">
+      <mat-error *ngIf="form.get('title').invalid">Le champ titre est requis - 50 caractères max</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Catégorie" formControlName="category">
+        <mat-option *ngFor="let category of categories" [value]=category.name>
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf='this.mode === "edit"'>
+      <mat-select placeholder="Statut du ticket" formControlName="status">
+        <mat-option *ngFor="let status of statusOptions" [value]=status.name>
+          {{ status.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput rows="4" formControlName="content" placeholder="Contenu du ticket">
+    </textarea>
+      <mat-error *ngIf="form.get('content').invalid">Le message est requis</mat-error>
+    </mat-form-field>
+
+    <mat-form-field *ngIf='this.mode === "edit"'>
+      <textarea matInput rows="4"
+      formControlName="response"
+      placeholder="Réponse à l'utilisateur">
+    </textarea>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit">Publier le ticket</button>
+    <button mat-raised-button routerLink="/">Annuler</button>
+  </form>
+</mat-card>
+

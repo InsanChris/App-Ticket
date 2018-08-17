@@ -1,0 +1,25 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+button {
+  background-color: #222222 ;
+  color: white;
+  margin: 0px 10px 0px auto;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: black;
+  color: #EB3C4E;
+  border: none;
+  cursor: pointer;
+}
+

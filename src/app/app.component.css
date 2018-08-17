@@ -1,0 +1,45 @@
+main {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.col-sm-8 {
+  background-color: #f8f8f8;
+}
+
+.row {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+.menu {
+  display: block;
+  margin-top: 10%;
+  background-color:#111617;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+a:hover {
+  color:red;
+}
+
+.side-column-1 {
+  background-color: #3F51B5;
+}
+
